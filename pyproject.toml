@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "collection_docs"
+version = "0.1.0"
+description = ""
+authors = ["dev <dev@qiyutch.tech>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+# for build ansible doc
+antsibull = ">=0.40,<1"
+
+# sphinx 文档样式
+sphinx-rtd-theme = "*"
+# sphinx not found extension
+# doc: https://sphinx-notfound-page.readthedocs.io
+sphinx-notfound-page = "*"
+# JSON Schema
+# https://sphinx-jsonschema.readthedocs.io/en/latest/installation.html
+sphinx-jsonschema = "*"
+# sphinx 分词
+jieba = "*"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
