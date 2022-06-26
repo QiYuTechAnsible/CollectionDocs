@@ -10,8 +10,8 @@
 make html
 ```
 
-## 部署文档
+## 部署
 
-```shell
-make copy-to-git
-```
+使用 Github Action 部署到 CloudFlare Pages
+
+

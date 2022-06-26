@@ -23,8 +23,8 @@ QiYuTech Core Collection
 .. raw:: html
 
   <p class="ansible-links">
-    <a href="https://dev.azure.com/QiYuTech/ansible/_workitems" aria-role="button" target="_blank" rel="noopener external">Issue Tracker</a>
-    <a href="https://dev.azure.com/QiYuTech/ansible/_git/collections" aria-role="button" target="_blank" rel="noopener external">Repository (Sources)</a>
+    <a href="https://github.com/QiYuTechAnsible/CollectionDocs/issues" aria-role="button" target="_blank" rel="noopener external">Issue Tracker</a>
+    <a href="https://github.com/QiYuTechAnsible/CollectionDocs" aria-role="button" target="_blank" rel="noopener external">Repository (Sources)</a>
   </p>
 
 
@@ -46,6 +46,7 @@ Modules
 * :ref:`check_os module <ansible_collections.qiyutech.core.check_os_module>` -- 检查是否支持远程服务器的操作系统
 * :ref:`check_role_args module <ansible_collections.qiyutech.core.check_role_args_module>` -- 检查当前的变量是否满足 role 的需要
 * :ref:`logger module <ansible_collections.qiyutech.core.logger_module>` -- 写入日志到 journald 或 文件中
+* :ref:`shell module <ansible_collections.qiyutech.core.shell_module>` -- 
 * :ref:`view_log module <ansible_collections.qiyutech.core.view_log_module>` -- 查看日志的命令
 
 
@@ -62,4 +63,5 @@ Modules
     check_os_module
     check_role_args_module
     logger_module
+    shell_module
     view_log_module

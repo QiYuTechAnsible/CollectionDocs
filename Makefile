@@ -12,12 +12,6 @@ BUILDDIR      = build
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-# 这个项目我们部署到 CloudFlare Pages
-# CloudFlare Pages 速度还可以
-copy-to-git:TARGET_DIR=~/QiYuTechDev/QiYuTechOrg/AnsibleCollectionsDocs
-copy-to-git:
-	rm -rf build/html/_sources
-	cp -rf build/html/* $(TARGET_DIR)
 
 .PHONY: help Makefile
 
@@ -26,6 +20,9 @@ copy-to-git:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
+fast-build:
+	make clean
+	make html
 
 format:
 	poetry run black source

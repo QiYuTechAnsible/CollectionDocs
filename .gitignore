@@ -1,5 +1,6 @@
 .idea
-build
+.vscode
 poetry.lock
 demo.json
 __pycache__/
+
