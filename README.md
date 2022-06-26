@@ -2,7 +2,7 @@
 
 本项目为 `collections` 对应的项目, 用于生成 Ansible 的文档
 
-[Ansible 文档网站](https://ansible.qiyutech.tech/)
+[Ansible 文档网站](https://ansible.2cc.net/)
 
 ## 构建文档
 
