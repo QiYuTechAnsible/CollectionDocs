@@ -1,0 +1,838 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>qiyutech.foreman.api_models_post module – Create a hardware model &mdash; 奇遇科技 Ansible Collection 文档  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/antsibull-minimal.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="qiyutech.foreman.api_operatingsystems module – List all operating systems" href="api_operatingsystems_module.html" />
+    <link rel="prev" title="qiyutech.foreman.api_models_id_put module – Update a hardware model" href="api_models_id_put_module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 奇遇科技 Ansible Collection 文档
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                22.1.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Qiyutech.Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/index.html">Qiyutech.Demo</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Qiyutech.Foreman</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">额外文档示例</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#plugin-index">Plugin Index</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#modules">Modules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_inventories_hostgroups_module.html">qiyutech.foreman.ansible_api_ansible_inventories_hostgroups module – Show Ansible inventory for hostgroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_inventories_hostgroups_post_module.html">qiyutech.foreman.ansible_api_ansible_inventories_hostgroups_post module – Show Ansible inventory for hostgroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_inventories_hosts_module.html">qiyutech.foreman.ansible_api_ansible_inventories_hosts module – Show Ansible inventory for hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_inventories_hosts_post_module.html">qiyutech.foreman.ansible_api_ansible_inventories_hosts_post module – Show Ansible inventory for hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_inventories_schedule_post_module.html">qiyutech.foreman.ansible_api_ansible_inventories_schedule_post module – Schedule generating of Ansible Inventory report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_override_values_id_delete_module.html">qiyutech.foreman.ansible_api_ansible_override_values_id_delete module – Destroy an override value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_override_values_post_module.html">qiyutech.foreman.ansible_api_ansible_override_values_post module – Create an override value for a specific ansible variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_roles_module.html">qiyutech.foreman.ansible_api_ansible_roles module – List Ansible roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_roles_fetch_module.html">qiyutech.foreman.ansible_api_ansible_roles_fetch module – Fetch Ansible roles available to be synced</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_roles_id_module.html">qiyutech.foreman.ansible_api_ansible_roles_id module – Show role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_roles_id_delete_module.html">qiyutech.foreman.ansible_api_ansible_roles_id_delete module – Deletes Ansible role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_roles_import_put_module.html">qiyutech.foreman.ansible_api_ansible_roles_import_put module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_roles_obsolete_put_module.html">qiyutech.foreman.ansible_api_ansible_roles_obsolete_put module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_roles_sync_put_module.html">qiyutech.foreman.ansible_api_ansible_roles_sync_put module – Sync Ansible roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_variables_module.html">qiyutech.foreman.ansible_api_ansible_variables module – List Ansible variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_variables_id_module.html">qiyutech.foreman.ansible_api_ansible_variables_id module – Show variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_variables_id_delete_module.html">qiyutech.foreman.ansible_api_ansible_variables_id_delete module – Deletes Ansible variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_variables_id_put_module.html">qiyutech.foreman.ansible_api_ansible_variables_id_put module – Updates Ansible variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_variables_import_put_module.html">qiyutech.foreman.ansible_api_ansible_variables_import_put module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_variables_obsolete_put_module.html">qiyutech.foreman.ansible_api_ansible_variables_obsolete_put module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansible_api_ansible_variables_post_module.html">qiyutech.foreman.ansible_api_ansible_variables_post module – Create Ansible variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_module.html">qiyutech.foreman.api module – Show available API links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_architectures_module.html">qiyutech.foreman.api_architectures module – List all architectures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_architectures_architecture_id_images_module.html">qiyutech.foreman.api_architectures_architecture_id_images module – List all images for architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_architectures_architecture_id_images_id_module.html">qiyutech.foreman.api_architectures_architecture_id_images_id module – Show an image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_architectures_architecture_id_operatingsystems_module.html">qiyutech.foreman.api_architectures_architecture_id_operatingsystems module – List all operating systems for nested architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_architectures_id_module.html">qiyutech.foreman.api_architectures_id module – Show an architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_architectures_id_delete_module.html">qiyutech.foreman.api_architectures_id_delete module – Delete an architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_architectures_id_put_module.html">qiyutech.foreman.api_architectures_id_put module – Update an architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_architectures_post_module.html">qiyutech.foreman.api_architectures_post module – Create an architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_audits_module.html">qiyutech.foreman.api_audits module – List all audits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_audits_id_module.html">qiyutech.foreman.api_audits_id module – Show an audit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_externals_module.html">qiyutech.foreman.api_auth_source_externals module – List external authentication sources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_externals_auth_source_external_id_users_module.html">qiyutech.foreman.api_auth_source_externals_auth_source_external_id_users module – List all users for external authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_externals_id_module.html">qiyutech.foreman.api_auth_source_externals_id module – Show an external authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_externals_id_put_module.html">qiyutech.foreman.api_auth_source_externals_id_put module – Update an external authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_internals_module.html">qiyutech.foreman.api_auth_source_internals module – List internal authentication sources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_internals_id_module.html">qiyutech.foreman.api_auth_source_internals_id module – Show an internal authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_ldaps_module.html">qiyutech.foreman.api_auth_source_ldaps module – List all LDAP authentication sources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_ldaps_auth_source_ldap_id_external_usergroups_module.html">qiyutech.foreman.api_auth_source_ldaps_auth_source_ldap_id_external_usergroups module – List all external user groups for LDAP authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_ldaps_auth_source_ldap_id_external_usergroups_id_module.html">qiyutech.foreman.api_auth_source_ldaps_auth_source_ldap_id_external_usergroups_id module – Show an external user group for LDAP authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_ldaps_auth_source_ldap_id_users_module.html">qiyutech.foreman.api_auth_source_ldaps_auth_source_ldap_id_users module – List all users for LDAP authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_ldaps_id_module.html">qiyutech.foreman.api_auth_source_ldaps_id module – Show an LDAP authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_ldaps_id_delete_module.html">qiyutech.foreman.api_auth_source_ldaps_id_delete module – Delete an LDAP authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_ldaps_id_put_module.html">qiyutech.foreman.api_auth_source_ldaps_id_put module – Update an LDAP authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_ldaps_id_test_put_module.html">qiyutech.foreman.api_auth_source_ldaps_id_test_put module – Test LDAP connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_source_ldaps_post_module.html">qiyutech.foreman.api_auth_source_ldaps_post module – Create an LDAP authentication source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_auth_sources_module.html">qiyutech.foreman.api_auth_sources module – List all authentication sources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_bookmarks_module.html">qiyutech.foreman.api_bookmarks module – List all bookmarks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_bookmarks_id_module.html">qiyutech.foreman.api_bookmarks_id module – Show a bookmark</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_bookmarks_id_delete_module.html">qiyutech.foreman.api_bookmarks_id_delete module – Delete a bookmark</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_bookmarks_id_put_module.html">qiyutech.foreman.api_bookmarks_id_put module – Update a bookmark</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_bookmarks_post_module.html">qiyutech.foreman.api_bookmarks_post module – Create a bookmark</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_common_parameters_module.html">qiyutech.foreman.api_common_parameters module – List all global parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_common_parameters_id_module.html">qiyutech.foreman.api_common_parameters_id module – Show a global parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_common_parameters_id_delete_module.html">qiyutech.foreman.api_common_parameters_id_delete module – Delete a global parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_common_parameters_id_put_module.html">qiyutech.foreman.api_common_parameters_id_put module – Update a global parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_common_parameters_post_module.html">qiyutech.foreman.api_common_parameters_post module – Create a global parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_attributes_id_module.html">qiyutech.foreman.api_compute_attributes_id module – Show a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_attributes_id_put_module.html">qiyutech.foreman.api_compute_attributes_id_put module – Update a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_attributes_post_module.html">qiyutech.foreman.api_compute_attributes_post module – Create a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_module.html">qiyutech.foreman.api_compute_profiles module – List of compute profiles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_compute_profile_id_compute_attributes_module.html">qiyutech.foreman.api_compute_profiles_compute_profile_id_compute_attributes module – List of compute attributes for compute profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_compute_profile_id_compute_attributes_id_module.html">qiyutech.foreman.api_compute_profiles_compute_profile_id_compute_attributes_id module – Show a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_compute_profile_id_compute_attributes_id_put_module.html">qiyutech.foreman.api_compute_profiles_compute_profile_id_compute_attributes_id_put module – Update a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_compute_profile_id_compute_attributes_post_module.html">qiyutech.foreman.api_compute_profiles_compute_profile_id_compute_attributes_post module – Create a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_compute_profile_id_compute_resources_compute_resource_id_compute_attributes_module.html">qiyutech.foreman.api_compute_profiles_compute_profile_id_compute_resources_compute_resource_id_compute_attributes module – List of compute attributes for provided compute profile and compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_compute_profile_id_compute_resources_compute_resource_id_compute_attributes_id_module.html">qiyutech.foreman.api_compute_profiles_compute_profile_id_compute_resources_compute_resource_id_compute_attributes_id module – Show a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_compute_profile_id_compute_resources_compute_resource_id_compute_attributes_id_put_module.html">qiyutech.foreman.api_compute_profiles_compute_profile_id_compute_resources_compute_resource_id_compute_attributes_id_put module – Update a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_compute_profile_id_compute_resources_compute_resource_id_compute_attributes_post_module.html">qiyutech.foreman.api_compute_profiles_compute_profile_id_compute_resources_compute_resource_id_compute_attributes_post module – Create a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_id_module.html">qiyutech.foreman.api_compute_profiles_id module – Show a compute profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_id_delete_module.html">qiyutech.foreman.api_compute_profiles_id_delete module – Delete a compute profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_id_put_module.html">qiyutech.foreman.api_compute_profiles_id_put module – Update a compute profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_profiles_post_module.html">qiyutech.foreman.api_compute_profiles_post module – Create a compute profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_module.html">qiyutech.foreman.api_compute_resources module – List all compute resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_compute_attributes_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_compute_attributes module – List of compute attributes for compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_compute_attributes_id_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_compute_attributes_id module – Show a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_compute_attributes_id_put_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_compute_attributes_id_put module – Update a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_compute_attributes_post_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_compute_attributes_post module – Create a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_compute_profiles_compute_profile_id_compute_attributes_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_compute_profiles_compute_profile_id_compute_attributes module – List of compute attributes for provided compute profile and compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_compute_profiles_compute_profile_id_compute_attributes_id_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_compute_profiles_compute_profile_id_compute_attributes_id module – Show a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_compute_profiles_compute_profile_id_compute_attributes_id_put_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_compute_profiles_compute_profile_id_compute_attributes_id_put module – Update a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_compute_profiles_compute_profile_id_compute_attributes_post_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_compute_profiles_compute_profile_id_compute_attributes_post module – Create a compute attributes set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_images_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_images module – List all images for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_images_id_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_images_id module – Show an image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_images_id_delete_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_images_id_delete module – Delete an image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_images_id_put_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_images_id_put module – Update an image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_compute_resource_id_images_post_module.html">qiyutech.foreman.api_compute_resources_compute_resource_id_images_post module – Create an image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_module.html">qiyutech.foreman.api_compute_resources_id module – Show a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_associate_put_module.html">qiyutech.foreman.api_compute_resources_id_associate_put module – Associate VMs to Hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_clusters_module.html">qiyutech.foreman.api_compute_resources_id_available_clusters module – List available clusters for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_clusters_cluster_id_available_networks_module.html">qiyutech.foreman.api_compute_resources_id_available_clusters_cluster_id_available_networks module – List available networks for a compute resource cluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_clusters_cluster_id_available_resource_pools_module.html">qiyutech.foreman.api_compute_resources_id_available_clusters_cluster_id_available_resource_pools module – List resource pools for a compute resource cluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_clusters_cluster_id_available_storage_domains_module.html">qiyutech.foreman.api_compute_resources_id_available_clusters_cluster_id_available_storage_domains module – List storage domains for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_clusters_cluster_id_available_storage_pods_module.html">qiyutech.foreman.api_compute_resources_id_available_clusters_cluster_id_available_storage_pods module – List storage pods for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_flavors_module.html">qiyutech.foreman.api_compute_resources_id_available_flavors module – List available flavors for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_folders_module.html">qiyutech.foreman.api_compute_resources_id_available_folders module – List available folders for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_images_module.html">qiyutech.foreman.api_compute_resources_id_available_images module – List available images for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_networks_module.html">qiyutech.foreman.api_compute_resources_id_available_networks module – List available networks for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_security_groups_module.html">qiyutech.foreman.api_compute_resources_id_available_security_groups module – List available security groups for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_storage_domains_module.html">qiyutech.foreman.api_compute_resources_id_available_storage_domains module – List storage domains for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_storage_domains_storage_domain_module.html">qiyutech.foreman.api_compute_resources_id_available_storage_domains_storage_domain module – List attributes for a given storage domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_storage_pods_module.html">qiyutech.foreman.api_compute_resources_id_available_storage_pods module – List storage pods for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_storage_pods_storage_pod_module.html">qiyutech.foreman.api_compute_resources_id_available_storage_pods_storage_pod module – List attributes for a given storage pod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_virtual_machines_module.html">qiyutech.foreman.api_compute_resources_id_available_virtual_machines module – List available virtual machines for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_virtual_machines_vm_id_module.html">qiyutech.foreman.api_compute_resources_id_available_virtual_machines_vm_id module – Show a virtual machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_virtual_machines_vm_id_delete_module.html">qiyutech.foreman.api_compute_resources_id_available_virtual_machines_vm_id_delete module – Delete a Virtual Machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_virtual_machines_vm_id_power_put_module.html">qiyutech.foreman.api_compute_resources_id_available_virtual_machines_vm_id_power_put module – Power a Virtual Machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_vnic_profiles_module.html">qiyutech.foreman.api_compute_resources_id_available_vnic_profiles module – List available vnic profiles for a compute resource, for oVirt only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_available_zones_module.html">qiyutech.foreman.api_compute_resources_id_available_zones module – List available zone for a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_delete_module.html">qiyutech.foreman.api_compute_resources_id_delete module – Delete a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_put_module.html">qiyutech.foreman.api_compute_resources_id_put module – Update a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_refresh_cache_put_module.html">qiyutech.foreman.api_compute_resources_id_refresh_cache_put module – Refresh Compute Resource Cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_storage_domains_storage_domain_id_module.html">qiyutech.foreman.api_compute_resources_id_storage_domains_storage_domain_id module – List attributes for a given storage domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_id_storage_pods_storage_pod_id_module.html">qiyutech.foreman.api_compute_resources_id_storage_pods_storage_pod_id module – List attributes for a given storage pod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_compute_resources_post_module.html">qiyutech.foreman.api_compute_resources_post module – Create a compute resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_config_reports_module.html">qiyutech.foreman.api_config_reports module – List all reports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_config_reports_id_module.html">qiyutech.foreman.api_config_reports_id module – Show a report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_config_reports_id_delete_module.html">qiyutech.foreman.api_config_reports_id_delete module – Delete a report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_config_reports_post_module.html">qiyutech.foreman.api_config_reports_post module – Create a report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_current_user_module.html">qiyutech.foreman.api_current_user module – Show the currently logged-in user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_dashboard_module.html">qiyutech.foreman.api_dashboard module – Get dashboard details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_module.html">qiyutech.foreman.api_domains module – List of domains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_domain_id_interfaces_module.html">qiyutech.foreman.api_domains_domain_id_interfaces module – List all interfaces for domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_domain_id_parameters_module.html">qiyutech.foreman.api_domains_domain_id_parameters module – List all parameters for a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_domain_id_parameters_delete_module.html">qiyutech.foreman.api_domains_domain_id_parameters_delete module – Delete all nested parameters for a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_domain_id_parameters_id_module.html">qiyutech.foreman.api_domains_domain_id_parameters_id module – Show a nested parameter for a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_domain_id_parameters_id_delete_module.html">qiyutech.foreman.api_domains_domain_id_parameters_id_delete module – Delete a nested parameter for a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_domain_id_parameters_id_put_module.html">qiyutech.foreman.api_domains_domain_id_parameters_id_put module – Update a nested parameter for a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_domain_id_parameters_post_module.html">qiyutech.foreman.api_domains_domain_id_parameters_post module – Create a nested parameter for a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_domain_id_subnets_module.html">qiyutech.foreman.api_domains_domain_id_subnets module – List of subnets for a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_id_module.html">qiyutech.foreman.api_domains_id module – Show a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_id_delete_module.html">qiyutech.foreman.api_domains_id_delete module – Delete a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_id_put_module.html">qiyutech.foreman.api_domains_id_put module – Update a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_domains_post_module.html">qiyutech.foreman.api_domains_post module – Create a domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_environments_environment_id_hosts_module.html">qiyutech.foreman.api_environments_environment_id_hosts module – List hosts per environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_environments_environment_id_smart_proxies_id_import_puppetclasses_post_module.html">qiyutech.foreman.api_environments_environment_id_smart_proxies_id_import_puppetclasses_post module – Import puppet classes from puppet proxy for an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_environments_environment_id_template_combinations_module.html">qiyutech.foreman.api_environments_environment_id_template_combinations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_environments_environment_id_template_combinations_id_module.html">qiyutech.foreman.api_environments_environment_id_template_combinations_id module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_environments_environment_id_template_combinations_id_put_module.html">qiyutech.foreman.api_environments_environment_id_template_combinations_id_put module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_environments_environment_id_template_combinations_post_module.html">qiyutech.foreman.api_environments_environment_id_template_combinations_post module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_fact_values_module.html">qiyutech.foreman.api_fact_values module – List all fact values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_filters_module.html">qiyutech.foreman.api_filters module – List all filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_filters_id_module.html">qiyutech.foreman.api_filters_id module – Show a filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_filters_id_delete_module.html">qiyutech.foreman.api_filters_id_delete module – Delete a filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_filters_id_put_module.html">qiyutech.foreman.api_filters_id_put module – Update a filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_filters_post_module.html">qiyutech.foreman.api_filters_post module – Create a filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_module.html">qiyutech.foreman.api_hostgroups module – List all host groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_hosts_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_hosts module – List all hosts for a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_parameters_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_parameters module – List all parameters for a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_parameters_delete_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_parameters_delete module – Delete all nested parameters for a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_parameters_id_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_parameters_id module – Show a nested parameter for a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_parameters_id_delete_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_parameters_id_delete module – Delete a nested parameter for a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_parameters_id_put_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_parameters_id_put module – Update a nested parameter for a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_parameters_post_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_parameters_post module – Create a nested parameter for a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_template_combinations_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_template_combinations module – List template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_template_combinations_id_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_template_combinations_id module – Show template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_template_combinations_id_put_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_template_combinations_id_put module – Update template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_hostgroup_id_template_combinations_post_module.html">qiyutech.foreman.api_hostgroups_hostgroup_id_template_combinations_post module – Add a template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_id_module.html">qiyutech.foreman.api_hostgroups_id module – Show a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_id_ansible_roles_module.html">qiyutech.foreman.api_hostgroups_id_ansible_roles module – List all Ansible roles for a hostgroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_id_assign_ansible_roles_post_module.html">qiyutech.foreman.api_hostgroups_id_assign_ansible_roles_post module – Assigns Ansible roles to a hostgroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_id_clone_post_module.html">qiyutech.foreman.api_hostgroups_id_clone_post module – Clone a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_id_delete_module.html">qiyutech.foreman.api_hostgroups_id_delete module – Delete a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_id_play_roles_post_module.html">qiyutech.foreman.api_hostgroups_id_play_roles_post module – Runs all Ansible roles on a hostgroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_id_put_module.html">qiyutech.foreman.api_hostgroups_id_put module – Update a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_id_rebuild_config_put_module.html">qiyutech.foreman.api_hostgroups_id_rebuild_config_put module – Rebuild orchestration config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_multiple_play_roles_post_module.html">qiyutech.foreman.api_hostgroups_multiple_play_roles_post module – Runs all Ansible roles on hostgroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hostgroups_post_module.html">qiyutech.foreman.api_hostgroups_post module – Create a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_module.html">qiyutech.foreman.api_hosts module – List all hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_facts_post_module.html">qiyutech.foreman.api_hosts_facts_post module – Upload facts for a host, creating the host if required</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_audits_module.html">qiyutech.foreman.api_hosts_host_id_audits module – List all audits for a given host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_config_reports_last_module.html">qiyutech.foreman.api_hosts_host_id_config_reports_last module – Show the last report for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_facts_module.html">qiyutech.foreman.api_hosts_host_id_facts module – List all fact values of a given host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_interfaces_module.html">qiyutech.foreman.api_hosts_host_id_interfaces module – List all interfaces for host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_interfaces_id_module.html">qiyutech.foreman.api_hosts_host_id_interfaces_id module – Show an interface for host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_interfaces_id_delete_module.html">qiyutech.foreman.api_hosts_host_id_interfaces_id_delete module – Delete a host’s interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_interfaces_id_put_module.html">qiyutech.foreman.api_hosts_host_id_interfaces_id_put module – Update a host’s interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_interfaces_post_module.html">qiyutech.foreman.api_hosts_host_id_interfaces_post module – Create an interface on a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_parameters_module.html">qiyutech.foreman.api_hosts_host_id_parameters module – List all parameters for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_parameters_delete_module.html">qiyutech.foreman.api_hosts_host_id_parameters_delete module – Delete all nested parameters for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_parameters_id_module.html">qiyutech.foreman.api_hosts_host_id_parameters_id module – Show a nested parameter for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_parameters_id_delete_module.html">qiyutech.foreman.api_hosts_host_id_parameters_id_delete module – Delete a nested parameter for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_parameters_id_put_module.html">qiyutech.foreman.api_hosts_host_id_parameters_id_put module – Update a nested parameter for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_host_id_parameters_post_module.html">qiyutech.foreman.api_hosts_host_id_parameters_post module – Create a nested parameter for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_module.html">qiyutech.foreman.api_hosts_id module – Show a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_ansible_roles_module.html">qiyutech.foreman.api_hosts_id_ansible_roles module – List all Ansible roles for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_assign_ansible_roles_post_module.html">qiyutech.foreman.api_hosts_id_assign_ansible_roles_post module – Assigns Ansible roles to a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_boot_put_module.html">qiyutech.foreman.api_hosts_id_boot_put module – Boot host from specified device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_delete_module.html">qiyutech.foreman.api_hosts_id_delete module – Delete a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_disassociate_put_module.html">qiyutech.foreman.api_hosts_id_disassociate_put module – Disassociate the host from a VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_enc_module.html">qiyutech.foreman.api_hosts_id_enc module – Get ENC values of host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_play_roles_post_module.html">qiyutech.foreman.api_hosts_id_play_roles_post module – Runs all Ansible roles on a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_power_module.html">qiyutech.foreman.api_hosts_id_power module – Fetch the status of whether the host is powered on or not. Supported hosts are VMs and physical hosts with BMCs.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_power_put_module.html">qiyutech.foreman.api_hosts_id_power_put module – Run a power operation on host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_puppetrun_put_module.html">qiyutech.foreman.api_hosts_id_puppetrun_put module – Force a Puppet agent run on the host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_put_module.html">qiyutech.foreman.api_hosts_id_put module – Update a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_rebuild_config_put_module.html">qiyutech.foreman.api_hosts_id_rebuild_config_put module – Rebuild orchestration config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_status_type_module.html">qiyutech.foreman.api_hosts_id_status_type module – Get status of host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_status_type_delete_module.html">qiyutech.foreman.api_hosts_id_status_type_delete module – Clear sub-status of host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_template_kind_module.html">qiyutech.foreman.api_hosts_id_template_kind module – Preview rendered provisioning template content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_id_vm_compute_attributes_module.html">qiyutech.foreman.api_hosts_id_vm_compute_attributes module – Get vm attributes of host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_multiple_play_roles_post_module.html">qiyutech.foreman.api_hosts_multiple_play_roles_post module – Runs all Ansible roles on hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_hosts_post_module.html">qiyutech.foreman.api_hosts_post module – Create a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_http_proxies_module.html">qiyutech.foreman.api_http_proxies module – List of HTTP Proxies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_http_proxies_id_module.html">qiyutech.foreman.api_http_proxies_id module – Show an HTTP Proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_http_proxies_id_delete_module.html">qiyutech.foreman.api_http_proxies_id_delete module – Delete an HTTP Proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_http_proxies_id_put_module.html">qiyutech.foreman.api_http_proxies_id_put module – Update an HTTP Proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_http_proxies_post_module.html">qiyutech.foreman.api_http_proxies_post module – Create an HTTP Proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_invocations_module.html">qiyutech.foreman.api_job_invocations module – List job invocations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_invocations_id_module.html">qiyutech.foreman.api_job_invocations_id module – Show job invocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_invocations_id_cancel_post_module.html">qiyutech.foreman.api_job_invocations_id_cancel_post module – Cancel job invocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_invocations_id_hosts_host_id_module.html">qiyutech.foreman.api_job_invocations_id_hosts_host_id module – Get output for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_invocations_id_hosts_host_id_raw_module.html">qiyutech.foreman.api_job_invocations_id_hosts_host_id_raw module – Get raw output for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_invocations_id_outputs_module.html">qiyutech.foreman.api_job_invocations_id_outputs module – Get outputs of hosts in a job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_invocations_id_rerun_post_module.html">qiyutech.foreman.api_job_invocations_id_rerun_post module – Rerun job on failed hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_invocations_job_invocation_id_template_invocations_module.html">qiyutech.foreman.api_job_invocations_job_invocation_id_template_invocations module – List template invocations belonging to job invocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_invocations_post_module.html">qiyutech.foreman.api_job_invocations_post module – Create a job invocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_templates_module.html">qiyutech.foreman.api_job_templates module – List job templates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_templates_id_module.html">qiyutech.foreman.api_job_templates_id module – Show job template details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_templates_id_clone_post_module.html">qiyutech.foreman.api_job_templates_id_clone_post module – Clone a provision template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_templates_id_delete_module.html">qiyutech.foreman.api_job_templates_id_delete module – Delete a job template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_templates_id_export_module.html">qiyutech.foreman.api_job_templates_id_export module – Export a job template to ERB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_templates_id_put_module.html">qiyutech.foreman.api_job_templates_id_put module – Update a job template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_templates_import_post_module.html">qiyutech.foreman.api_job_templates_import_post module – Import a job template from ERB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_templates_post_module.html">qiyutech.foreman.api_job_templates_post module – Create a job template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_job_templates_revision_module.html">qiyutech.foreman.api_job_templates_revision module – None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_module.html">qiyutech.foreman.api_locations module – List all locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_id_module.html">qiyutech.foreman.api_locations_id module – Show a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_id_delete_module.html">qiyutech.foreman.api_locations_id_delete module – Delete a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_id_put_module.html">qiyutech.foreman.api_locations_id_put module – Update a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_auth_source_externals_module.html">qiyutech.foreman.api_locations_location_id_auth_source_externals module – List external authentication sources per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_auth_source_ldaps_module.html">qiyutech.foreman.api_locations_location_id_auth_source_ldaps module – List LDAP authentication sources per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_auth_sources_module.html">qiyutech.foreman.api_locations_location_id_auth_sources module – List all authentication sources per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_domains_module.html">qiyutech.foreman.api_locations_location_id_domains module – List of domains per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_hostgroups_module.html">qiyutech.foreman.api_locations_location_id_hostgroups module – List all host groups per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_hosts_module.html">qiyutech.foreman.api_locations_location_id_hosts module – List hosts per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_job_templates_module.html">qiyutech.foreman.api_locations_location_id_job_templates module – List job templates per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_media_module.html">qiyutech.foreman.api_locations_location_id_media module – List all media per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_parameters_module.html">qiyutech.foreman.api_locations_location_id_parameters module – List all parameters for a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_parameters_delete_module.html">qiyutech.foreman.api_locations_location_id_parameters_delete module – Delete all nested parameter for a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_parameters_id_module.html">qiyutech.foreman.api_locations_location_id_parameters_id module – Show a nested parameter for a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_parameters_id_delete_module.html">qiyutech.foreman.api_locations_location_id_parameters_id_delete module – Delete a nested parameter for a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_parameters_id_put_module.html">qiyutech.foreman.api_locations_location_id_parameters_id_put module – Update a nested parameter for a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_parameters_post_module.html">qiyutech.foreman.api_locations_location_id_parameters_post module – Create a nested parameter for a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_provisioning_templates_module.html">qiyutech.foreman.api_locations_location_id_provisioning_templates module – List provisioning templates per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_ptables_module.html">qiyutech.foreman.api_locations_location_id_ptables module – List all partition tables per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_report_templates_module.html">qiyutech.foreman.api_locations_location_id_report_templates module – List all report templates per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_subnets_module.html">qiyutech.foreman.api_locations_location_id_subnets module – List of subnets per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_location_id_users_module.html">qiyutech.foreman.api_locations_location_id_users module – List all users for location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_locations_post_module.html">qiyutech.foreman.api_locations_post module – Create a location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_mail_notifications_module.html">qiyutech.foreman.api_mail_notifications module – List of email notifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_mail_notifications_id_module.html">qiyutech.foreman.api_mail_notifications_id module – Show an email notification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_media_module.html">qiyutech.foreman.api_media module – List all installation media</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_media_id_module.html">qiyutech.foreman.api_media_id module – Show a medium</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_media_id_delete_module.html">qiyutech.foreman.api_media_id_delete module – Delete a medium</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_media_id_put_module.html">qiyutech.foreman.api_media_id_put module – Update a medium</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_media_medium_id_operatingsystems_module.html">qiyutech.foreman.api_media_medium_id_operatingsystems module – List all operating systems for nested medium</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_media_post_module.html">qiyutech.foreman.api_media_post module – Create a medium</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_models_module.html">qiyutech.foreman.api_models module – List all hardware models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_models_id_module.html">qiyutech.foreman.api_models_id module – Show a hardware model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_models_id_delete_module.html">qiyutech.foreman.api_models_id_delete module – Delete a hardware model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_models_id_put_module.html">qiyutech.foreman.api_models_id_put module – Update a hardware model</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">qiyutech.foreman.api_models_post module – Create a hardware model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_module.html">qiyutech.foreman.api_operatingsystems module – List all operating systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_id_module.html">qiyutech.foreman.api_operatingsystems_id module – Show an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_id_bootfiles_module.html">qiyutech.foreman.api_operatingsystems_id_bootfiles module – List boot files for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_id_delete_module.html">qiyutech.foreman.api_operatingsystems_id_delete module – Delete an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_id_put_module.html">qiyutech.foreman.api_operatingsystems_id_put module – Update an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_architectures_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_architectures module – List all architectures for operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_images_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_images module – List all images for operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_images_id_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_images_id module – Show an image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_media_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_media module – List all media for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_os_default_templates_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_os_default_templates module – List default templates combinations for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_os_default_templates_id_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_os_default_templates_id module – Show a default template combination for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_os_default_templates_id_delete_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_os_default_templates_id_delete module – Delete a default template combination for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_os_default_templates_id_put_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_os_default_templates_id_put module – Update a default template combination for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_os_default_templates_post_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_os_default_templates_post module – Create a default template combination for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_parameters_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_parameters module – List all parameters for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_parameters_delete_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_parameters_delete module – Delete all nested parameters for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_parameters_id_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_parameters_id module – Show a nested parameter for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_parameters_id_delete_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_parameters_id_delete module – Delete a nested parameter for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_parameters_id_put_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_parameters_id_put module – Update a nested parameter for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_parameters_post_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_parameters_post module – Create a nested parameter for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_provisioning_templates_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_provisioning_templates module – List provisioning templates per operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_operatingsystem_id_ptables_module.html">qiyutech.foreman.api_operatingsystems_operatingsystem_id_ptables module – List all partition tables for an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_operatingsystems_post_module.html">qiyutech.foreman.api_operatingsystems_post module – Create an operating system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_orchestration_id_tasks_module.html">qiyutech.foreman.api_orchestration_id_tasks module – List all tasks for a given orchestration event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_module.html">qiyutech.foreman.api_organizations module – List all organizations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_id_module.html">qiyutech.foreman.api_organizations_id module – Show an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_id_delete_module.html">qiyutech.foreman.api_organizations_id_delete module – Delete an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_id_put_module.html">qiyutech.foreman.api_organizations_id_put module – Update an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_auth_source_externals_module.html">qiyutech.foreman.api_organizations_organization_id_auth_source_externals module – List external authentication sources per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_auth_source_ldaps_module.html">qiyutech.foreman.api_organizations_organization_id_auth_source_ldaps module – List LDAP authentication sources per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_auth_sources_module.html">qiyutech.foreman.api_organizations_organization_id_auth_sources module – List all authentication sources per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_domains_module.html">qiyutech.foreman.api_organizations_organization_id_domains module – List of domains per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_hostgroups_module.html">qiyutech.foreman.api_organizations_organization_id_hostgroups module – List all host groups per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_hosts_module.html">qiyutech.foreman.api_organizations_organization_id_hosts module – List hosts per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_job_templates_module.html">qiyutech.foreman.api_organizations_organization_id_job_templates module – List job templates per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_media_module.html">qiyutech.foreman.api_organizations_organization_id_media module – List all media per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_parameters_module.html">qiyutech.foreman.api_organizations_organization_id_parameters module – List all parameters for an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_parameters_delete_module.html">qiyutech.foreman.api_organizations_organization_id_parameters_delete module – Delete all nested parameter for an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_parameters_id_module.html">qiyutech.foreman.api_organizations_organization_id_parameters_id module – Show a nested parameter for an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_parameters_id_delete_module.html">qiyutech.foreman.api_organizations_organization_id_parameters_id_delete module – Delete a nested parameter for an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_parameters_id_put_module.html">qiyutech.foreman.api_organizations_organization_id_parameters_id_put module – Update a nested parameter for an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_parameters_post_module.html">qiyutech.foreman.api_organizations_organization_id_parameters_post module – Create a nested parameter for an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_provisioning_templates_module.html">qiyutech.foreman.api_organizations_organization_id_provisioning_templates module – List provisioning templates per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_ptables_module.html">qiyutech.foreman.api_organizations_organization_id_ptables module – List all partition tables per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_report_templates_module.html">qiyutech.foreman.api_organizations_organization_id_report_templates module – List all report templates per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_subnets_module.html">qiyutech.foreman.api_organizations_organization_id_subnets module – List of subnets per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_organization_id_users_module.html">qiyutech.foreman.api_organizations_organization_id_users module – List all users for organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_organizations_post_module.html">qiyutech.foreman.api_organizations_post module – Create an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_permissions_module.html">qiyutech.foreman.api_permissions module – List all permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_permissions_id_module.html">qiyutech.foreman.api_permissions_id module – Show a permission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_permissions_resource_types_module.html">qiyutech.foreman.api_permissions_resource_types module – List available resource types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ping_module.html">qiyutech.foreman.api_ping module – Shows status of Foreman system and it’s subcomponents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_plugins_module.html">qiyutech.foreman.api_plugins module – List installed plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_module.html">qiyutech.foreman.api_provisioning_templates module – List provisioning templates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_build_pxe_default_post_module.html">qiyutech.foreman.api_provisioning_templates_build_pxe_default_post module – Update the default PXE menu on all configured TFTP servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_id_module.html">qiyutech.foreman.api_provisioning_templates_id module – Show provisioning template details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_id_clone_post_module.html">qiyutech.foreman.api_provisioning_templates_id_clone_post module – Clone a provision template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_id_delete_module.html">qiyutech.foreman.api_provisioning_templates_id_delete module – Delete a provisioning template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_id_export_module.html">qiyutech.foreman.api_provisioning_templates_id_export module – Export a provisioning template to ERB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_id_put_module.html">qiyutech.foreman.api_provisioning_templates_id_put module – Update a provisioning template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_import_post_module.html">qiyutech.foreman.api_provisioning_templates_import_post module – Import a provisioning template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_post_module.html">qiyutech.foreman.api_provisioning_templates_post module – Create a provisioning template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_provisioning_template_id_operatingsystems_module.html">qiyutech.foreman.api_provisioning_templates_provisioning_template_id_operatingsystems module – List all operating systems for nested provisioning template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_provisioning_template_id_os_default_templates_module.html">qiyutech.foreman.api_provisioning_templates_provisioning_template_id_os_default_templates module – List operating systems where this template is set as a default</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_provisioning_template_id_template_combinations_module.html">qiyutech.foreman.api_provisioning_templates_provisioning_template_id_template_combinations module – List template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_provisioning_template_id_template_combinations_id_module.html">qiyutech.foreman.api_provisioning_templates_provisioning_template_id_template_combinations_id module – Show template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_provisioning_template_id_template_combinations_id_put_module.html">qiyutech.foreman.api_provisioning_templates_provisioning_template_id_template_combinations_id_put module – Update template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_provisioning_template_id_template_combinations_post_module.html">qiyutech.foreman.api_provisioning_templates_provisioning_template_id_template_combinations_post module – Add a template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_provisioning_templates_revision_module.html">qiyutech.foreman.api_provisioning_templates_revision module – None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_module.html">qiyutech.foreman.api_ptables module – List all partition tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_id_module.html">qiyutech.foreman.api_ptables_id module – Show a partition table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_id_clone_post_module.html">qiyutech.foreman.api_ptables_id_clone_post module – Clone a template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_id_delete_module.html">qiyutech.foreman.api_ptables_id_delete module – Delete a partition table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_id_export_module.html">qiyutech.foreman.api_ptables_id_export module – Export a partition template to ERB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_id_put_module.html">qiyutech.foreman.api_ptables_id_put module – Update a partition table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_import_post_module.html">qiyutech.foreman.api_ptables_import_post module – Import a provisioning template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_post_module.html">qiyutech.foreman.api_ptables_post module – Create a partition table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_ptable_id_operatingsystems_module.html">qiyutech.foreman.api_ptables_ptable_id_operatingsystems module – List all operating systems for nested partition table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_ptables_revision_module.html">qiyutech.foreman.api_ptables_revision module – None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_puppetclasses_puppetclass_id_hostgroups_module.html">qiyutech.foreman.api_puppetclasses_puppetclass_id_hostgroups module – List all host groups for a Puppet class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_realms_module.html">qiyutech.foreman.api_realms module – List of realms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_realms_id_module.html">qiyutech.foreman.api_realms_id module – Show a realm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_realms_id_delete_module.html">qiyutech.foreman.api_realms_id_delete module – Delete a realm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_realms_id_put_module.html">qiyutech.foreman.api_realms_id_put module – Update a realm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_realms_post_module.html">qiyutech.foreman.api_realms_post module – Create a realm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_register_module.html">qiyutech.foreman.api_register module – Render Global registration template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_register_post_module.html">qiyutech.foreman.api_register_post module – Find or create a host and render the ‘Host initial configuration’ template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_registration_commands_post_module.html">qiyutech.foreman.api_registration_commands_post module – Generate global registration command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_remote_execution_features_module.html">qiyutech.foreman.api_remote_execution_features module – List remote execution features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_remote_execution_features_id_module.html">qiyutech.foreman.api_remote_execution_features_id module – Show remote execution feature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_remote_execution_features_id_put_module.html">qiyutech.foreman.api_remote_execution_features_id_put module – Update a job template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_module.html">qiyutech.foreman.api_report_templates module – List all report templates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_id_module.html">qiyutech.foreman.api_report_templates_id module – Show a report template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_id_clone_post_module.html">qiyutech.foreman.api_report_templates_id_clone_post module – Clone a template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_id_delete_module.html">qiyutech.foreman.api_report_templates_id_delete module – Delete a report template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_id_export_module.html">qiyutech.foreman.api_report_templates_id_export module – Export a report template to ERB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_id_generate_post_module.html">qiyutech.foreman.api_report_templates_id_generate_post module – Generate report from a template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_id_put_module.html">qiyutech.foreman.api_report_templates_id_put module – Update a report template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_id_report_data_job_id_module.html">qiyutech.foreman.api_report_templates_id_report_data_job_id module – Downloads a generated report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_id_schedule_report_post_module.html">qiyutech.foreman.api_report_templates_id_schedule_report_post module – Schedule generating of a report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_import_post_module.html">qiyutech.foreman.api_report_templates_import_post module – Import a report template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_post_module.html">qiyutech.foreman.api_report_templates_post module – Create a report template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_report_templates_revision_module.html">qiyutech.foreman.api_report_templates_revision module – None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_roles_module.html">qiyutech.foreman.api_roles module – List all roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_roles_id_module.html">qiyutech.foreman.api_roles_id module – Show a role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_roles_id_clone_post_module.html">qiyutech.foreman.api_roles_id_clone_post module – Clone a role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_roles_id_delete_module.html">qiyutech.foreman.api_roles_id_delete module – Delete a role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_roles_id_put_module.html">qiyutech.foreman.api_roles_id_put module – Update a role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_roles_post_module.html">qiyutech.foreman.api_roles_post module – Create a role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_roles_role_id_users_module.html">qiyutech.foreman.api_roles_role_id_users module – List all users for role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_settings_module.html">qiyutech.foreman.api_settings module – List all settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_settings_id_module.html">qiyutech.foreman.api_settings_id module – Show a setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_settings_id_put_module.html">qiyutech.foreman.api_settings_id_put module – Update a setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_module.html">qiyutech.foreman.api_smart_proxies module – List all smart proxies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_id_module.html">qiyutech.foreman.api_smart_proxies_id module – Show a smart proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_id_delete_module.html">qiyutech.foreman.api_smart_proxies_id_delete module – Delete a smart proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_id_import_puppetclasses_post_module.html">qiyutech.foreman.api_smart_proxies_id_import_puppetclasses_post module – Import puppet classes from puppet proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_id_put_module.html">qiyutech.foreman.api_smart_proxies_id_put module – Update a smart proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_id_refresh_put_module.html">qiyutech.foreman.api_smart_proxies_id_refresh_put module – Refresh smart proxy features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_post_module.html">qiyutech.foreman.api_smart_proxies_post module – Create a smart proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_smart_proxy_id_autosign_module.html">qiyutech.foreman.api_smart_proxies_smart_proxy_id_autosign module – List all autosign entries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_smart_proxy_id_autosign_id_delete_module.html">qiyutech.foreman.api_smart_proxies_smart_proxy_id_autosign_id_delete module – Delete autosign entry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_smart_proxy_id_autosign_post_module.html">qiyutech.foreman.api_smart_proxies_smart_proxy_id_autosign_post module – Create autosign entry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_smart_proxies_smart_proxy_id_environments_id_import_puppetclasses_post_module.html">qiyutech.foreman.api_smart_proxies_smart_proxy_id_environments_id_import_puppetclasses_post module – Import puppet classes from puppet proxy for an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_statistics_module.html">qiyutech.foreman.api_statistics module – Get statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_status_module.html">qiyutech.foreman.api_status module – Show status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_statuses_module.html">qiyutech.foreman.api_statuses module – Shows status and version information of Foreman system and it’s subcomponents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_module.html">qiyutech.foreman.api_subnets module – List of subnets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_id_module.html">qiyutech.foreman.api_subnets_id module – Show a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_id_delete_module.html">qiyutech.foreman.api_subnets_id_delete module – Delete a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_id_freeip_module.html">qiyutech.foreman.api_subnets_id_freeip module – Provides an unused IP address in this subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_id_put_module.html">qiyutech.foreman.api_subnets_id_put module – Update a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_post_module.html">qiyutech.foreman.api_subnets_post module – Create a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_subnet_id_domains_module.html">qiyutech.foreman.api_subnets_subnet_id_domains module – List of domains per subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_subnet_id_interfaces_module.html">qiyutech.foreman.api_subnets_subnet_id_interfaces module – List all interfaces for subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_subnet_id_parameters_module.html">qiyutech.foreman.api_subnets_subnet_id_parameters module – List all parameters for a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_subnet_id_parameters_delete_module.html">qiyutech.foreman.api_subnets_subnet_id_parameters_delete module – Delete all nested parameters for a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_subnet_id_parameters_id_module.html">qiyutech.foreman.api_subnets_subnet_id_parameters_id module – Show a nested parameter for a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_subnet_id_parameters_id_delete_module.html">qiyutech.foreman.api_subnets_subnet_id_parameters_id_delete module – Delete a nested parameter for a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_subnet_id_parameters_id_put_module.html">qiyutech.foreman.api_subnets_subnet_id_parameters_id_put module – Update a nested parameter for a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_subnets_subnet_id_parameters_post_module.html">qiyutech.foreman.api_subnets_subnet_id_parameters_post module – Create a nested parameter for a subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_template_combinations_id_module.html">qiyutech.foreman.api_template_combinations_id module – Show template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_template_combinations_id_delete_module.html">qiyutech.foreman.api_template_combinations_id_delete module – Delete a template combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_template_kinds_module.html">qiyutech.foreman.api_template_kinds module – List all template kinds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_export_post_module.html">qiyutech.foreman.api_templates_export_post module – Initiate Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_import_post_module.html">qiyutech.foreman.api_templates_import_post module – Initiate Import</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_foreign_input_sets_module.html">qiyutech.foreman.api_templates_template_id_foreign_input_sets module – List foreign input sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_foreign_input_sets_id_module.html">qiyutech.foreman.api_templates_template_id_foreign_input_sets_id module – Show foreign input set details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_foreign_input_sets_id_delete_module.html">qiyutech.foreman.api_templates_template_id_foreign_input_sets_id_delete module – Delete a foreign input set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_foreign_input_sets_id_put_module.html">qiyutech.foreman.api_templates_template_id_foreign_input_sets_id_put module – Update a foreign input set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_foreign_input_sets_post_module.html">qiyutech.foreman.api_templates_template_id_foreign_input_sets_post module – Create a foreign input set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_template_inputs_module.html">qiyutech.foreman.api_templates_template_id_template_inputs module – List template inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_template_inputs_id_module.html">qiyutech.foreman.api_templates_template_id_template_inputs_id module – Show template input details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_template_inputs_id_delete_module.html">qiyutech.foreman.api_templates_template_id_template_inputs_id_delete module – Delete a template input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_template_inputs_id_put_module.html">qiyutech.foreman.api_templates_template_id_template_inputs_id_put module – Update a template input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_templates_template_id_template_inputs_post_module.html">qiyutech.foreman.api_templates_template_id_template_inputs_post module – Create a template input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_trends_module.html">qiyutech.foreman.api_trends module – List of trends counters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_trends_id_module.html">qiyutech.foreman.api_trends_id module – Show a trend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_trends_id_delete_module.html">qiyutech.foreman.api_trends_id_delete module – Delete a trend counter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_trends_post_module.html">qiyutech.foreman.api_trends_post module – Create a trend counter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_module.html">qiyutech.foreman.api_usergroups module – List all user groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_id_module.html">qiyutech.foreman.api_usergroups_id module – Show a user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_id_delete_module.html">qiyutech.foreman.api_usergroups_id_delete module – Delete a user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_id_put_module.html">qiyutech.foreman.api_usergroups_id_put module – Update a user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_post_module.html">qiyutech.foreman.api_usergroups_post module – Create a user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_usergroup_id_external_usergroups_module.html">qiyutech.foreman.api_usergroups_usergroup_id_external_usergroups module – List all external user groups for user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_usergroup_id_external_usergroups_id_module.html">qiyutech.foreman.api_usergroups_usergroup_id_external_usergroups_id module – Show an external user group for user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_usergroup_id_external_usergroups_id_delete_module.html">qiyutech.foreman.api_usergroups_usergroup_id_external_usergroups_id_delete module – Delete an external user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_usergroup_id_external_usergroups_id_put_module.html">qiyutech.foreman.api_usergroups_usergroup_id_external_usergroups_id_put module – Update external user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_usergroup_id_external_usergroups_id_refresh_put_module.html">qiyutech.foreman.api_usergroups_usergroup_id_external_usergroups_id_refresh_put module – Refresh external user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_usergroup_id_external_usergroups_post_module.html">qiyutech.foreman.api_usergroups_usergroup_id_external_usergroups_post module – Create an external user group linked to a user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_usergroups_usergroup_id_users_module.html">qiyutech.foreman.api_usergroups_usergroup_id_users module – List all users for user group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_module.html">qiyutech.foreman.api_users module – List all users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_id_module.html">qiyutech.foreman.api_users_id module – Show a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_id_delete_module.html">qiyutech.foreman.api_users_id_delete module – Delete a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_id_put_module.html">qiyutech.foreman.api_users_id_put module – Update a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_post_module.html">qiyutech.foreman.api_users_post module – Create a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_mail_notifications_module.html">qiyutech.foreman.api_users_user_id_mail_notifications module – List all email notifications for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_mail_notifications_mail_notification_id_delete_module.html">qiyutech.foreman.api_users_user_id_mail_notifications_mail_notification_id_delete module – Remove an email notification for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_mail_notifications_mail_notification_id_put_module.html">qiyutech.foreman.api_users_user_id_mail_notifications_mail_notification_id_put module – Update an email notification for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_mail_notifications_post_module.html">qiyutech.foreman.api_users_user_id_mail_notifications_post module – Add an email notification for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_personal_access_tokens_module.html">qiyutech.foreman.api_users_user_id_personal_access_tokens module – List all Personal Access Tokens for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_personal_access_tokens_id_module.html">qiyutech.foreman.api_users_user_id_personal_access_tokens_id module – Show a Personal Access Token for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_personal_access_tokens_id_delete_module.html">qiyutech.foreman.api_users_user_id_personal_access_tokens_id_delete module – Revoke a Personal Access Token for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_personal_access_tokens_post_module.html">qiyutech.foreman.api_users_user_id_personal_access_tokens_post module – Create a Personal Access Token for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_ssh_keys_module.html">qiyutech.foreman.api_users_user_id_ssh_keys module – List all SSH keys for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_ssh_keys_id_module.html">qiyutech.foreman.api_users_user_id_ssh_keys_id module – Show an SSH key from a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_ssh_keys_id_delete_module.html">qiyutech.foreman.api_users_user_id_ssh_keys_id_delete module – Delete an SSH key for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_ssh_keys_post_module.html">qiyutech.foreman.api_users_user_id_ssh_keys_post module – Add an SSH key for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_table_preferences_module.html">qiyutech.foreman.api_users_user_id_table_preferences module – List of table preferences for a user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_table_preferences_name_module.html">qiyutech.foreman.api_users_user_id_table_preferences_name module – Table preference details of a given table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_table_preferences_name_delete_module.html">qiyutech.foreman.api_users_user_id_table_preferences_name_delete module – Delete a table preference for a given table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_table_preferences_name_put_module.html">qiyutech.foreman.api_users_user_id_table_preferences_name_put module – Updates a table preference for a given table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_users_user_id_table_preferences_post_module.html">qiyutech.foreman.api_users_user_id_table_preferences_post module – Creates a table preference for a given table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhook_templates_module.html">qiyutech.foreman.api_webhook_templates module – List webhook templates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhook_templates_id_module.html">qiyutech.foreman.api_webhook_templates_id module – Show webhook template details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhook_templates_id_clone_post_module.html">qiyutech.foreman.api_webhook_templates_id_clone_post module – Clone a template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhook_templates_id_delete_module.html">qiyutech.foreman.api_webhook_templates_id_delete module – Delete a webhook template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhook_templates_id_export_module.html">qiyutech.foreman.api_webhook_templates_id_export module – Export a webhook template to ERB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhook_templates_id_put_module.html">qiyutech.foreman.api_webhook_templates_id_put module – Update a webhook template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhook_templates_import_post_module.html">qiyutech.foreman.api_webhook_templates_import_post module – Import a webhook template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhook_templates_post_module.html">qiyutech.foreman.api_webhook_templates_post module – Create a webhook template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhooks_module.html">qiyutech.foreman.api_webhooks module – List Webhooks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhooks_events_module.html">qiyutech.foreman.api_webhooks_events module – List available events for subscription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhooks_id_module.html">qiyutech.foreman.api_webhooks_id module – Show Webhook details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhooks_id_delete_module.html">qiyutech.foreman.api_webhooks_id_delete module – Delete a Webhook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhooks_id_put_module.html">qiyutech.foreman.api_webhooks_id_put module – Update a Webhook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_webhooks_post_module.html">qiyutech.foreman.api_webhooks_post module – Create a Webhook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bootdisk_api_module.html">qiyutech.foreman.bootdisk_api module – Subnet boot disks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bootdisk_api_generic_module.html">qiyutech.foreman.bootdisk_api_generic module – Download generic image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bootdisk_api_hosts_host_id_module.html">qiyutech.foreman.bootdisk_api_hosts_host_id module – Download host image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bootdisk_api_subnets_subnet_id_module.html">qiyutech.foreman.bootdisk_api_subnets_subnet_id module – Download subnet generic image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_config_groups_module.html">qiyutech.foreman.foreman_puppet_api_config_groups module – List of config groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_config_groups_id_module.html">qiyutech.foreman.foreman_puppet_api_config_groups_id module – Show a config group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_config_groups_id_delete_module.html">qiyutech.foreman.foreman_puppet_api_config_groups_id_delete module – Delete a config group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_config_groups_id_put_module.html">qiyutech.foreman.foreman_puppet_api_config_groups_id_put module – Update a config group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_config_groups_post_module.html">qiyutech.foreman.foreman_puppet_api_config_groups_post module – Create a config group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_module.html">qiyutech.foreman.foreman_puppet_api_environments module – List all environments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_environment_id_puppetclasses_module.html">qiyutech.foreman.foreman_puppet_api_environments_environment_id_puppetclasses module – List all Puppet classes for an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_environment_id_puppetclasses_id_module.html">qiyutech.foreman.foreman_puppet_api_environments_environment_id_puppetclasses_id module – Show a Puppet class for an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_environment_id_puppetclasses_puppetclass_id_smart_class_parameters_module.html">qiyutech.foreman.foreman_puppet_api_environments_environment_id_puppetclasses_puppetclass_id_smart_class_parameters module – List of smart class parameters for a specific environment/Puppet class combination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_environment_id_smart_class_parameters_module.html">qiyutech.foreman.foreman_puppet_api_environments_environment_id_smart_class_parameters module – List of smart class parameters for a specific environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_environment_id_smart_proxies_id_import_puppetclasses_post_module.html">qiyutech.foreman.foreman_puppet_api_environments_environment_id_smart_proxies_id_import_puppetclasses_post module – Import puppet classes from puppet proxy for an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_id_module.html">qiyutech.foreman.foreman_puppet_api_environments_id module – Show an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_id_delete_module.html">qiyutech.foreman.foreman_puppet_api_environments_id_delete module – Delete an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_id_put_module.html">qiyutech.foreman.foreman_puppet_api_environments_id_put module – Update an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_environments_post_module.html">qiyutech.foreman.foreman_puppet_api_environments_post module – Create an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hostgroups_hostgroup_id_puppetclass_ids_module.html">qiyutech.foreman.foreman_puppet_api_hostgroups_hostgroup_id_puppetclass_ids module – List all Puppet class IDs for host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hostgroups_hostgroup_id_puppetclass_ids_id_delete_module.html">qiyutech.foreman.foreman_puppet_api_hostgroups_hostgroup_id_puppetclass_ids_id_delete module – Remove a Puppet class from host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hostgroups_hostgroup_id_puppetclass_ids_post_module.html">qiyutech.foreman.foreman_puppet_api_hostgroups_hostgroup_id_puppetclass_ids_post module – Add a Puppet class to host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hostgroups_hostgroup_id_puppetclasses_module.html">qiyutech.foreman.foreman_puppet_api_hostgroups_hostgroup_id_puppetclasses module – List all Puppet classes for a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hostgroups_hostgroup_id_puppetclasses_id_module.html">qiyutech.foreman.foreman_puppet_api_hostgroups_hostgroup_id_puppetclasses_id module – Show a Puppet class for a host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hostgroups_hostgroup_id_smart_class_parameters_module.html">qiyutech.foreman.foreman_puppet_api_hostgroups_hostgroup_id_smart_class_parameters module – List of smart class parameters for a specific host group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hosts_host_id_puppetclass_ids_module.html">qiyutech.foreman.foreman_puppet_api_hosts_host_id_puppetclass_ids module – List all Puppet class IDs for host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hosts_host_id_puppetclass_ids_id_delete_module.html">qiyutech.foreman.foreman_puppet_api_hosts_host_id_puppetclass_ids_id_delete module – Remove a Puppet class from host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hosts_host_id_puppetclass_ids_post_module.html">qiyutech.foreman.foreman_puppet_api_hosts_host_id_puppetclass_ids_post module – Add a Puppet class to host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hosts_host_id_puppetclasses_module.html">qiyutech.foreman.foreman_puppet_api_hosts_host_id_puppetclasses module – List all Puppet classes for a host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hosts_host_id_puppetclasses_id_module.html">qiyutech.foreman.foreman_puppet_api_hosts_host_id_puppetclasses_id module – Show a Puppet class for host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_hosts_host_id_smart_class_parameters_module.html">qiyutech.foreman.foreman_puppet_api_hosts_host_id_smart_class_parameters module – List of smart class parameters for a specific host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_locations_location_id_environments_module.html">qiyutech.foreman.foreman_puppet_api_locations_location_id_environments module – List environments per location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_organizations_organization_id_environments_module.html">qiyutech.foreman.foreman_puppet_api_organizations_organization_id_environments module – List environments per organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_puppetclasses_module.html">qiyutech.foreman.foreman_puppet_api_puppetclasses module – List all Puppet classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_puppetclasses_id_module.html">qiyutech.foreman.foreman_puppet_api_puppetclasses_id module – Show a Puppet class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_puppetclasses_id_delete_module.html">qiyutech.foreman.foreman_puppet_api_puppetclasses_id_delete module – Delete a Puppet class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_puppetclasses_id_put_module.html">qiyutech.foreman.foreman_puppet_api_puppetclasses_id_put module – Update a Puppet class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_puppetclasses_post_module.html">qiyutech.foreman.foreman_puppet_api_puppetclasses_post module – Create a Puppet class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_puppetclasses_puppetclass_id_environments_module.html">qiyutech.foreman.foreman_puppet_api_puppetclasses_puppetclass_id_environments module – List environments of Puppet class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_puppetclasses_puppetclass_id_smart_class_parameters_module.html">qiyutech.foreman.foreman_puppet_api_puppetclasses_puppetclass_id_smart_class_parameters module – List of smart class parameters for a specific Puppet class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_class_parameters_module.html">qiyutech.foreman.foreman_puppet_api_smart_class_parameters module – List all smart class parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_class_parameters_id_module.html">qiyutech.foreman.foreman_puppet_api_smart_class_parameters_id module – Show a smart class parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_class_parameters_id_put_module.html">qiyutech.foreman.foreman_puppet_api_smart_class_parameters_id_put module – Update a smart class parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values_module.html">qiyutech.foreman.foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values module – List of override values for a specific smart class parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values_id_module.html">qiyutech.foreman.foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values_id module – Show an override value for a specific smart class parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values_id_delete_module.html">qiyutech.foreman.foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values_id_delete module – Delete an override value for a specific smart class parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values_id_put_module.html">qiyutech.foreman.foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values_id_put module – Update an override value for a specific smart class parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values_post_module.html">qiyutech.foreman.foreman_puppet_api_smart_class_parameters_smart_class_parameter_id_override_values_post module – Create an override value for a specific smart class parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_proxies_id_import_puppetclasses_post_module.html">qiyutech.foreman.foreman_puppet_api_smart_proxies_id_import_puppetclasses_post module – Import puppet classes from puppet proxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_puppet_api_smart_proxies_smart_proxy_id_environments_id_import_puppetclasses_post_module.html">qiyutech.foreman.foreman_puppet_api_smart_proxies_smart_proxy_id_environments_id_import_puppetclasses_post module – Import puppet classes from puppet proxy for an environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_recurring_logics_module.html">qiyutech.foreman.foreman_tasks_api_recurring_logics module – List recurring logics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_recurring_logics_bulk_destroy_post_module.html">qiyutech.foreman.foreman_tasks_api_recurring_logics_bulk_destroy_post module – Delete recurring logics by search query</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_recurring_logics_id_module.html">qiyutech.foreman.foreman_tasks_api_recurring_logics_id module – Show recurring logic details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_recurring_logics_id_cancel_post_module.html">qiyutech.foreman.foreman_tasks_api_recurring_logics_id_cancel_post module – Cancel recurring logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_recurring_logics_id_put_module.html">qiyutech.foreman.foreman_tasks_api_recurring_logics_id_put module – Update recurring logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_module.html">qiyutech.foreman.foreman_tasks_api_tasks module – List tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_bulk_cancel_post_module.html">qiyutech.foreman.foreman_tasks_api_tasks_bulk_cancel_post module – Cancel selected cancellable tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_bulk_resume_post_module.html">qiyutech.foreman.foreman_tasks_api_tasks_bulk_resume_post module – Resume all paused error tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_bulk_search_post_module.html">qiyutech.foreman.foreman_tasks_api_tasks_bulk_search_post module – List dynflow tasks for uuids</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_bulk_stop_post_module.html">qiyutech.foreman.foreman_tasks_api_tasks_bulk_stop_post module – Stop selected stoppable tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_callback_post_module.html">qiyutech.foreman.foreman_tasks_api_tasks_callback_post module – Send data to the task from external executor (such as smart_proxy_dynflow)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_id_module.html">qiyutech.foreman.foreman_tasks_api_tasks_id module – Show task details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_id_details_module.html">qiyutech.foreman.foreman_tasks_api_tasks_id_details module – Show task extended details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_parent_task_id_sub_tasks_module.html">qiyutech.foreman.foreman_tasks_api_tasks_parent_task_id_sub_tasks module – Show sub_tasks details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="foreman_tasks_api_tasks_summary_module.html">qiyutech.foreman.foreman_tasks_api_tasks_summary module – Show task summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_domain_module.html">qiyutech.foreman.hl_domain module – Foreman 域配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_host_module.html">qiyutech.foreman.hl_host module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_os_module.html">qiyutech.foreman.hl_os module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_provision_template_module.html">qiyutech.foreman.hl_provision_template module – Foreman Provision 模版</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_ptable_module.html">qiyutech.foreman.hl_ptable module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_setting_module.html">qiyutech.foreman.hl_setting module – Foreman 配置操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_subnet_module.html">qiyutech.foreman.hl_subnet module – Foreman 子网操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="operating_systems_module.html">qiyutech.foreman.operating_systems module – 获取 Foreman 的操作系统列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="operating_systems_id_module.html">qiyutech.foreman.operating_systems_id module – 获取 Foreman 的操作系统详情</a></li>
+<li class="toctree-l4"><a class="reference internal" href="smart_proxies_module.html">qiyutech.foreman.smart_proxies module – 获取 Foreman 的 智能代理 列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="smart_proxies_id_module.html">qiyutech.foreman.smart_proxies_id module – 获取 智能代理(by id) 的详细信息</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Qiyutech.Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../message/index.html">Qiyutech.Message</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proxmox/index.html">Qiyutech.Proxmox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Qiyutech.Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">Qiyutech.Vm</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">奇遇科技 Ansible Collection 文档</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Qiyutech.Foreman</a> &raquo;</li>
+        
+      <li>qiyutech.foreman.api_models_post module – Create a hardware model</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="ansible-collections-qiyutech-foreman-api-models-post-module"></span><section id="qiyutech-foreman-api-models-post-module-create-a-hardware-model">
+<h1>qiyutech.foreman.api_models_post module – Create a hardware model<a class="headerlink" href="#qiyutech-foreman-api-models-post-module-create-a-hardware-model" title="Permalink to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>This module is part of the <a class="reference external" href="https://galaxy.ansible.com/qiyutech/foreman">qiyutech.foreman collection</a> (version 1.0.0).</p>
+<p>You might already have this collection installed if you are using the <code class="docutils literal notranslate"><span class="pre">ansible</span></code> package.
+It is not included in <code class="docutils literal notranslate"><span class="pre">ansible-core</span></code>.
+To check whether it is installed, run <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">list</span></code>.</p>
+<p>To install it, use: <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">install</span> <span class="pre">qiyutech.foreman</span></code>.</p>
+<p>To use it in a playbook, specify: <code class="code docutils literal notranslate"><span class="pre">qiyutech.foreman.api_models_post</span></code>.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">1.0.0 新版功能: </span>of qiyutech.foreman</p>
+</div>
+<nav class="contents local" id="id1">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id2">Synopsis</a></p></li>
+</ul>
+</nav>
+<section id="synopsis">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Create a hardware model</p></li>
+<li></li>
+<li><p>doc: <a class="reference external" href="https://ksle.2cc.net/apidoc/v2/models/create">https://ksle.2cc.net/apidoc/v2/models/create</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>This module has a corresponding <a class="reference external" href="https://docs.ansible.com/ansible/latest/plugins/action.html#action-plugins" title="(在 Ansible v6)"><span class="xref std std-ref">action plugin</span></a>.</p>
+</div>
+<section id="collection-links">
+<h3>Collection links<a class="headerlink" href="#collection-links" title="Permalink to this heading">¶</a></h3>
+<p class="ansible-links">
+  <a href="https://github.com/QiYuTechAnsible/CollectionDocs/issues" aria-role="button" target="_blank" rel="noopener external">Issue Tracker</a>
+  <a href="https://github.com/QiYuTechAnsible/CollectionDocs" aria-role="button" target="_blank" rel="noopener external">Repository (Sources)</a>
+</p></section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api_models_id_put_module.html" class="btn btn-neutral float-left" title="qiyutech.foreman.api_models_id_put module – Update a hardware model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="api_operatingsystems_module.html" class="btn btn-neutral float-right" title="qiyutech.foreman.api_operatingsystems module – List all operating systems" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      &#169; 版权所有 <a target="_blank" href="https://www.qiyutech.tech">2022, 奇遇科技</a>.
+      <br/><br/>
+      <span>联系我们: <a href="mailto:admin@qiyutech.tech">admin@qiyutech.tech</a></span>
+    </p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <img src="https://cdn.jsdelivr.net/gh/QiYuTechDev/static@main/sphinx/img/wx_qr.png"
+         title="企业微信二维码"
+         width="128" height="128" alt="wx">
+    <img src="https://cdn.jsdelivr.net/gh/QiYuTechDev/static@main/sphinx/img/python-powered-w.svg"
+         title="由 Python 提供支持"
+         width="200" alt="python">
+  </div>
+
+  
+  <script>
+    (function (d, t) {
+      var BASE_URL = "https://ct.qiyutech.tech";
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.src = BASE_URL + "/packs/js/sdk.js";
+      g.defer = true;
+      g.async = true;
+      s.parentNode.insertBefore(g, s);
+      g.onload = function () {
+        window.chatwootSDK.run({
+          websiteToken: 'AyVaaFJkGFuJRhBZLpzuhX4x',
+          baseUrl: BASE_URL
+        })
+      }
+    })(document, "script");
+  </script>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

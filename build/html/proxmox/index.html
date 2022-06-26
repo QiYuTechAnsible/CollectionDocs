@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Qiyutech.Proxmox &mdash; 奇遇科技 Ansible Collection 文档  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/antsibull-minimal.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="qiyutech.proxmox.hl_qemu_op module – QEMU 虚拟机 操作" href="hl_qemu_op_module.html" />
+    <link rel="prev" title="qiyutech.message.xterm module – 显示命令行输出信息给用户" href="../message/xterm_module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 奇遇科技 Ansible Collection 文档
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                22.1.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Qiyutech.Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/index.html">Qiyutech.Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreman/index.html">Qiyutech.Foreman</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Qiyutech.Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../message/index.html">Qiyutech.Message</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Qiyutech.Proxmox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#plugin-index">Plugin Index</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modules">Modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hl_qemu_op_module.html">qiyutech.proxmox.hl_qemu_op module – QEMU 虚拟机 操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_qemu_snapshot_module.html">qiyutech.proxmox.hl_qemu_snapshot module – QEMU 虚拟机 快照 创建/删除 接口</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_qemu_vm_module.html">qiyutech.proxmox.hl_qemu_vm module – QEMU 虚拟机 创建/删除 接口</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hl_task_status_module.html">qiyutech.proxmox.hl_task_status module – PVE 任务状态检查</a></li>
+<li class="toctree-l4"><a class="reference internal" href="version_module.html">qiyutech.proxmox.version module – Get Proxmox(PVE) version</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Qiyutech.Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">Qiyutech.Vm</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">奇遇科技 Ansible Collection 文档</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Qiyutech.Proxmox</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="qiyutech-proxmox">
+<span id="plugins-in-qiyutech-proxmox"></span><h1>Qiyutech.Proxmox<a class="headerlink" href="#qiyutech-proxmox" title="Permalink to this heading">¶</a></h1>
+<p>Collection version 1.0.0</p>
+<nav class="contents local" id="id1">
+<ul class="simple">
+<li><p><a class="reference internal" href="#description" id="id2">Description</a></p></li>
+<li><p><a class="reference internal" href="#plugin-index" id="id3">Plugin Index</a></p></li>
+</ul>
+</nav>
+<section id="description">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Description</a><a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>QiYuTech Proxmox (PVE) Collection</p>
+<p><strong>Author:</strong></p>
+<ul class="simple">
+<li><p>dev &lt;<a class="reference external" href="mailto:dev&#37;&#52;&#48;qiyutech&#46;tech">dev<span>&#64;</span>qiyutech<span>&#46;</span>tech</a>&gt;</p></li>
+</ul>
+<p class="ansible-links">
+  <a href="https://github.com/QiYuTechAnsible/CollectionDocs/issues" aria-role="button" target="_blank" rel="noopener external">Issue Tracker</a>
+  <a href="https://github.com/QiYuTechAnsible/CollectionDocs" aria-role="button" target="_blank" rel="noopener external">Repository (Sources)</a>
+</p><div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="plugin-index">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Plugin Index</a><a class="headerlink" href="#plugin-index" title="Permalink to this heading">¶</a></h2>
+<p>These are the plugins in the qiyutech.proxmox collection:</p>
+<section id="modules">
+<h3>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="hl_qemu_op_module.html#ansible-collections-qiyutech-proxmox-hl-qemu-op-module"><span class="std std-ref">hl_qemu_op module</span></a> – QEMU 虚拟机 操作</p></li>
+<li><p><a class="reference internal" href="hl_qemu_snapshot_module.html#ansible-collections-qiyutech-proxmox-hl-qemu-snapshot-module"><span class="std std-ref">hl_qemu_snapshot module</span></a> – QEMU 虚拟机 快照 创建/删除 接口</p></li>
+<li><p><a class="reference internal" href="hl_qemu_vm_module.html#ansible-collections-qiyutech-proxmox-hl-qemu-vm-module"><span class="std std-ref">hl_qemu_vm module</span></a> – QEMU 虚拟机 创建/删除 接口</p></li>
+<li><p><a class="reference internal" href="hl_task_status_module.html#ansible-collections-qiyutech-proxmox-hl-task-status-module"><span class="std std-ref">hl_task_status module</span></a> – PVE 任务状态检查</p></li>
+<li><p><a class="reference internal" href="version_module.html#ansible-collections-qiyutech-proxmox-version-module"><span class="std std-ref">version module</span></a> – Get Proxmox(PVE) version</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>List of <a class="reference external" href="https://docs.ansible.com/ansible/latest/collections/index.html#list-of-collections" title="(在 Ansible v6)"><span class="xref std std-ref">collections</span></a> with docs hosted here.</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../message/xterm_module.html" class="btn btn-neutral float-left" title="qiyutech.message.xterm module – 显示命令行输出信息给用户" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="hl_qemu_op_module.html" class="btn btn-neutral float-right" title="qiyutech.proxmox.hl_qemu_op module – QEMU 虚拟机 操作" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      &#169; 版权所有 <a target="_blank" href="https://www.qiyutech.tech">2022, 奇遇科技</a>.
+      <br/><br/>
+      <span>联系我们: <a href="mailto:admin@qiyutech.tech">admin@qiyutech.tech</a></span>
+    </p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <img src="https://cdn.jsdelivr.net/gh/QiYuTechDev/static@main/sphinx/img/wx_qr.png"
+         title="企业微信二维码"
+         width="128" height="128" alt="wx">
+    <img src="https://cdn.jsdelivr.net/gh/QiYuTechDev/static@main/sphinx/img/python-powered-w.svg"
+         title="由 Python 提供支持"
+         width="200" alt="python">
+  </div>
+
+  
+  <script>
+    (function (d, t) {
+      var BASE_URL = "https://ct.qiyutech.tech";
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.src = BASE_URL + "/packs/js/sdk.js";
+      g.defer = true;
+      g.async = true;
+      s.parentNode.insertBefore(g, s);
+      g.onload = function () {
+        window.chatwootSDK.run({
+          websiteToken: 'AyVaaFJkGFuJRhBZLpzuhX4x',
+          baseUrl: BASE_URL
+        })
+      }
+    })(document, "script");
+  </script>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
